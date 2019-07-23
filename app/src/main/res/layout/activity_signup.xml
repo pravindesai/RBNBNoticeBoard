@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/sign_up"
+        android:textSize="30sp"
+        android:background="@color/colorPrimary"
+        android:textStyle="normal|bold|italic" />
+
+
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:ems="10"
+        android:autofillHints="emailEt"
+        android:hint="@string/name"
+        android:inputType="textEmailAddress"
+        tools:targetApi="o" />
+
+
+    <EditText
+        android:id="@+id/phoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameEt"
+        android:ems="10"
+        android:hint="@string/phone_no"
+        android:inputType="phone"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/rollEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneEt"
+        android:ems="10"
+        android:hint="@string/roll_no"
+        android:inputType="number"
+        android:padding="10dp" />
+
+    <EditText
+        android:padding="10dp"
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rollEt"
+        android:ems="10"
+        android:autofillHints="emailEt"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEt"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:targetApi="o" />
+
+    <Spinner
+        android:id="@+id/classSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/passwordEt"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classSpinner"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="@string/signup"
+        app:backgroundTint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/logIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signUpBtn"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/already_have_an_account_n_sign_in"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

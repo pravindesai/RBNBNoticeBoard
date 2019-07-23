@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">R.B.N.B. NoticeBoard</string>
+    <string name="log_in">Log in</string>
+    <string name="mail">mail</string>
+    <string name="login">login</string>
+    <string name="dont_have_account_n_create_account">Dont have account ? \nCreate Account.</string>
+    <string name="sign_up">Sign up</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="signup">signup</string>
+    <string name="already_have_an_account_n_sign_in">Already have an account?\n Sign in</string>
+    <string name="verifying">Verifying ..</string>
+    <string name="Continue">Continue</string>
+    <string name="date">date</string>
+    <string name="title">title</string>
+    <string name="text">text</string>
+    <string name="add_notice">Add Notice</string>
+    <string name="title_">Title</string>
+    <string name="notice">Notice</string>
+    <string name="publish">Publish</string>
+    <string name="cancel">cancel</string>
+    <string name="phone_no">phone no</string>
+    <string name="roll_no">roll no</string>
+</resources>

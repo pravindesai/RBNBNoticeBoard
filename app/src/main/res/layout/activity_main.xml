@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+
+    <TextView
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginBottom="5dp"
+    android:gravity="center"
+    android:padding="10dp"
+    android:textSize="30sp"
+    android:text="@string/log_in"
+    android:background="@color/colorPrimary"
+    android:textStyle="normal|bold|italic" />
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:autofillHints="emailEt"
+        android:ems="10"
+        android:hint="@string/mail"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEt"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEt"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/login" />
+
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginBtn"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/dont_have_account_n_create_account"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

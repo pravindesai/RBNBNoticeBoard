@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Add notice"
+        android:id="@+id/Add"></item>
+
+        <item
+            android:title="Follow"
+            android:id="@+id/Follow"></item>
+
+    <item
+        android:title="Invite"
+        android:id="@+id/Invite"></item>
+
+        <item
+            android:title="About App"
+            android:id="@+id/About"></item>
+
+    <item
+        android:title="Logout"
+        android:id="@+id/Logout"></item>
+</menu>
