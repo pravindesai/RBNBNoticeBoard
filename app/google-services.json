@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "710704581592",
+    "firebase_url": "https://mynoticeboard-1d28e-default-rtdb.firebaseio.com",
+    "project_id": "mynoticeboard-1d28e",
+    "storage_bucket": "mynoticeboard-1d28e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710704581592:android:13531ce099e448e4ae40ad",
+        "android_client_info": {
+          "package_name": "com.pack.batman.rbnbnoticeboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710704581592-ok6vp6s8j6n1plervprr3p6trajb2lr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBo-8iygKaBqXuyTsU8k-9eBtQhE9zMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710704581592-ok6vp6s8j6n1plervprr3p6trajb2lr1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

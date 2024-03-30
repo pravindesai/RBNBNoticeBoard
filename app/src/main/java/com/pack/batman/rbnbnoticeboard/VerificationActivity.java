@@ -52,7 +52,7 @@ public class VerificationActivity extends AppCompatActivity {
         }else
         {
             textView.setText(" "+user.getEmail()+"\n Click on Verification link from  " +
-                                    "noreply@rbnbnoticeboard in your inbox"+"\nand press continue");
+                                    "noreply@noticeboard in your inbox"+"\nand press continue");
             pd.dismiss();
         }
     }
