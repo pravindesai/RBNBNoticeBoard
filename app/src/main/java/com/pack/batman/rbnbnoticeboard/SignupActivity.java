@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -123,11 +124,21 @@ public class SignupActivity extends AppCompatActivity {
                         {
                             String id=Dref.push().getKey();
                             UserDetails userdetail=new UserDetails(id,name,phone,Email,className,roll);
-                            Dref.child(id).setValue(userdetail);
-                            sendVerificationMail();
-                            startActivity(new Intent(SignupActivity.this,VerificationActivity.class));
-                            finish();
-                            pd.dismiss();
+                            Task<Void> createUserTask = Dref.child(id).setValue(userdetail);
+
+                            createUserTask.addOnCompleteListener(task1 -> {
+                                sendVerificationMail();
+                                startActivity(new Intent(SignupActivity.this,VerificationActivity.class));
+                                finish();
+                                pd.dismiss();
+
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    pd.dismiss();
+                                    Toast.makeText(SignupActivity.this, "Verificaction mail sent", Toast.LENGTH_SHORT).show();
+                                }
+                            });
                         }
                         else
                         {
@@ -146,8 +157,7 @@ public class SignupActivity extends AppCompatActivity {
     {
         if(user!=null)
         {
-            user.sendEmailVerification()
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             Toast.makeText(SignupActivity.this, "Verificaction mail sent", Toast.LENGTH_SHORT).show();

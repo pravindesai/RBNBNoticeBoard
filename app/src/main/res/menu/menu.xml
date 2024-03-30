@@ -5,12 +5,8 @@
         android:id="@+id/Add"></item>
 
         <item
-            android:title="Follow"
-            android:id="@+id/Follow"></item>
-
-    <item
-        android:title="Invite"
-        android:id="@+id/Invite"></item>
+            android:title="Refresh"
+            android:id="@+id/Refresh"></item>
 
         <item
             android:title="About App"

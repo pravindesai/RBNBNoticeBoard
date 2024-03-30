@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         passwordEt=findViewById(R.id.passwordEt);
         signUp=findViewById(R.id.signUp);
         loginBtn=findViewById(R.id.loginBtn);
-        pd = new ProgressDialog(MainActivity.this); pd.setMessage("loading");
+        pd = new ProgressDialog(MainActivity.this);
+        pd.setMessage("loading");
 
     }
     @Override

@@ -39,7 +39,8 @@ public class ProfileActivity extends AppCompatActivity {
     ImageButton imgButton;
     ProgressDialog pd;
 
-
+    String dept = "";
+    String studentName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +83,8 @@ public class ProfileActivity extends AppCompatActivity {
                          UserDetails uDetails=Ds.getValue(UserDetails.class);
                          String name=uDetails.getName();
                          String Dept=uDetails.getDept();
+                         dept = Dept;
+                         studentName = name;
                          ShowNotice(name,Dept);
                      }
                  }
@@ -121,10 +124,12 @@ public class ProfileActivity extends AppCompatActivity {
                          NoticeListView.addItemDecoration(itemDecoration);
                      }
                  }
+                 pd.dismiss();
              }
 
              @Override
              public void onCancelled(@NonNull DatabaseError databaseError) {
+                pd.dismiss();
              }
          });
 
@@ -145,34 +150,20 @@ public class ProfileActivity extends AppCompatActivity {
             case R.id.Add:
                 startActivity(new Intent(ProfileActivity.this,AddNoticeActivity.class));
                 break;
-            case R.id.Follow:
-                String url = "https://twitter.com/pravindesai__";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                startActivity(intent);
-                break;
-            case R.id.Invite:
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Check out the NoticeBoard App at: https://play.google.com/store/apps/details?id=" +getPackageName());
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
+            case R.id.Refresh:
+                pd.show();
+                ShowNotice(studentName, dept);
 
                 break;
+
             case R.id.About:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage("This app provides you Daily Weekly " +
                         "and Monthly notices and updates of your specific " +
-                        "department, Hence saves your time and paper."
-                        +"\nApp is created by individual. " +
-                        "\nNot an official app of RBNB college.\n"
-                        +"Developed and maintained by : Pravin Desai \n"
-                        +"pravindesai100@gmail.com")
+                        "department, Hence saves your time and paper.")
                         .setCancelable(false)
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                //do things
-                            }
+                        .setPositiveButton("OK", (dialog, id1) -> {
+                            dialog.dismiss();
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
