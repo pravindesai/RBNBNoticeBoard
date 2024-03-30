@@ -152,6 +152,10 @@ public class ProfileActivity extends AppCompatActivity {
                 break;
             case R.id.Refresh:
                 pd.show();
+                date.clear();
+                name.clear();
+                title.clear();
+                text.clear();
                 ShowNotice(studentName, dept);
 
                 break;
